@@ -18,7 +18,7 @@ const Header = () => {
         <div className="flex text-start space-x-4 ">
         <Image
       src="/logo.png"
-      width={129}
+      width={120}
       height={38}
       alt="logo"
     />
@@ -38,9 +38,9 @@ const Header = () => {
           <TfiHeart className=" bg-[#F4F5F4] rounded-lg  text-gray-500 font-normal p-2" size={37} />
           <FiShoppingCart className=" bg-[#F4F5F4] rounded-lg  text-gray-500 font-normal p-2" size={37} />
           <Image
-          className="pl-4 md:hidden"
+          className="pl-2 lg:block md:hidden"
       src="/cloud.png"
-      width={140}
+      width={130}
       height={24}
       alt="cloud image"
     />
