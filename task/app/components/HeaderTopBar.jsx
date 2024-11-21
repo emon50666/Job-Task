@@ -3,9 +3,9 @@ import { IoIosArrowUp } from "react-icons/io";
 
 
 const HeaderTopBar = () => {
-    return (
-        <div className="container mx-auto py-2 hidden sm:block md:px-4">
-        <div className="flex justify-between text-[12px] text-[#434343]">
+    return ( 
+        <div className="container mx-auto py-2 hidden sm:block md:px-4 text-[#434343]">
+        <div className="flex justify-between text-[12px] ">
           {/* Left side content */}
           <div className="flex gap-7">
             <h3 className="flex text-[#F68D20] items-center">

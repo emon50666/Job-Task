@@ -1,11 +1,11 @@
 import Image from 'next/image';
 const Banner = () =>{
     return(
-        <div>
+        <div id="banner">
         <Image
         src="/banner.png"
         width={1920}
-        height={391}
+        height={350}
         alt="logo"
       />
          

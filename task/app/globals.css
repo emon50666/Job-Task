@@ -21,3 +21,7 @@ body {
   background: var(--background);
   font-family: "Inter", sans-serif;
 }
+
+#banner img {
+  height: 320px;
+}
