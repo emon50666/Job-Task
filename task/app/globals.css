@@ -23,5 +23,45 @@ body {
 }
 
 #banner img {
-  height: 320px;
+  height: 320px; /* Default height for larger screens */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 640px) {
+  #banner img {
+    height: auto; /* Set height to 0px for mobile devices */
+  }
+}
+
+
+/* Tailwind CSS styles for hover effect */
+.category-container {
+  @apply flex;
+}
+
+.categories-list {
+  @apply w-1/4 bg-gray-100 p-4;
+}
+
+.category-item {
+  @apply relative cursor-pointer p-2 hover:bg-gray-200;
+  &:hover .subcategories-list {
+    @apply block;
+  }
+}
+
+.subcategories-list {
+  @apply absolute left-full top-0 bg-white shadow-lg w-48 hidden;
+}
+
+.subcategory-item {
+  @apply p-2 hover:bg-gray-300;
+}
+
+.nested-subcategories {
+  @apply absolute left-full top-0 bg-white shadow-lg w-48 hidden;
+}
+
+.nested-subcategory-item {
+  @apply p-2 hover:bg-gray-400;
 }

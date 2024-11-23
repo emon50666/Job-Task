@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
-const Category = () => {
+const MobileCategory = () => {
   const [categories, setCategories] = useState([]);
   const [hoveredPath, setHoveredPath] = useState([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Track menu open state for smaller screens
@@ -69,10 +69,10 @@ const Category = () => {
     <div className="relative ">
       {/* Menu toggle button for small screens */}
       <button
-        className="md:hidden p-2 text-[#FC8C21]  rounded"
+        className="md:hidden p-2 text-[#FC8C21] bg-white rounded"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        {isMenuOpen ? "Close Menu" : "Categories"}
+        {isMenuOpen ? "Close Categories" : "Open Categories"}
       </button>
 
       {/* Dropdown menu container */}
@@ -94,4 +94,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default MobileCategory;

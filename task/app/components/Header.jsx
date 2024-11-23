@@ -6,15 +6,16 @@ import { FiShoppingCart } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Image from 'next/image';
+import MobileCategory from "../components/MobileCategory";
 
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="relative">
+    <header className="relative lg:pb-6">
       {/* Desktop Header */}
-      <div className="hidden md:flex items-center justify-center gap-14 w-full mx-auto px-4 py-2 bg-white shadow-sm">
+      <div className="hidden md:flex items-center justify-center gap-14 w-full mx-auto px-4 py-2 bg-white ">
         <div className="flex text-start space-x-4 ">
         <Image
       src="/logo.png"
@@ -29,8 +30,8 @@ const Header = () => {
             placeholder="Search Product"
             className="flex-grow border bg-[#EEF1F5] rounded-l-md px-4 py-2 focus:outline-none"
           />
-          <button className="bg-orange-600 text-white relative px-4 py-3 rounded-r-md">
-            <TfiSearch size={17} />
+          <button className="bg-[#F97217] text-white relative px-4 py-3 rounded-r-md">
+            <TfiSearch size={18} />
           </button>
         </div>
         <div className="flex items-center space-x-2 relative ">
@@ -65,7 +66,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-0 left-0 w-full h-full bg-white shadow-md z-50">
+        <div className="absolute top-0 left-0 w-full h-full bg-white pb-10  shadow-md z-50">
           <div className="flex items-center justify-between px-2 py-2">
       
             <button
@@ -75,7 +76,7 @@ const Header = () => {
               <MdClose size={24} />
             </button>
           </div>
-          <div className="flex flex-col bg-white items-center space-y-4 mt-2">
+          <div className="flex flex-col bg-white items-center space-y-4  mt-2">
             <div className="w-full px-1">
             <div className="flex items-center w-full max-w-md">
           <input
@@ -83,15 +84,20 @@ const Header = () => {
             placeholder="Search Product"
             className="flex-grow border bg-[#EEF1F5] rounded-l-md px-4 py-2 focus:outline-none"
           />
-          <button className="bg-orange-600 text-white  px-4 py-3 rounded-r-md">
+          <button className="bg-[#F97217] text-white  px-4 py-3 rounded-r-md">
             <TfiSearch size={17} />
           </button>
         </div>
             </div>
+           
           </div>
-          
+        <div className="py-3 px-2">
+        <MobileCategory/>
         </div>
+        </div>
+         
       )}
+     
     </header>
   );
 };
